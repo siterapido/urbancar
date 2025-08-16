@@ -86,13 +86,13 @@ export const PassengerSection: React.FC = () => {
             <div className="passenger-section__buttons">
               <Button 
                 variant="white" 
-                size="lg"
+                size="md"
                 onClick={() => window.open('https://play.google.com/store/apps/details?id=ikKpss.urbancar&pli=1', '_blank')}
               >
                 <FiSmartphone />
                 Baixar o App e Começar Agora
               </Button>
-              <Button variant="white" size="lg">
+              <Button variant="white" size="md">
                 Ver Como Funciona
               </Button>
             </div>
