@@ -1,6 +1,5 @@
 import React from 'react';
 import { FiDollarSign, FiX, FiGift, FiMapPin, FiTrendingUp, FiShield } from 'react-icons/fi';
-import { SectionTitle } from '../shared/SectionTitle';
 import { Card } from '../shared/Card';
 import { Button } from '../shared/Button';
 import './DriverSection.css';
@@ -45,12 +44,26 @@ export const DriverSection: React.FC = () => {
   return (
     <section id="motoristas" className="driver-section">
       <div className="container">
-        <SectionTitle
-          subtitle="Para Motoristas"
-          title="Mais corridas, menos taxas, mais ganhos"
-          description="Junte-se a uma plataforma que valoriza seu trabalho e oferece condições justas para você prosperar como motorista profissional."
-          variant="dark"
-        />
+        <div className="driver-section__header">
+          <span className="driver-section__subtitle">Para Motoristas</span>
+          <div className="driver-section__title-highlight">
+            <div className="driver-section__title-item">
+              <span className="driver-section__title-icon">📈</span>
+              <span className="driver-section__title-text">Mais corridas</span>
+            </div>
+            <div className="driver-section__title-item">
+              <span className="driver-section__title-icon">💰</span>
+              <span className="driver-section__title-text">Menos taxas</span>
+            </div>
+            <div className="driver-section__title-item">
+              <span className="driver-section__title-icon">💵</span>
+              <span className="driver-section__title-text">Mais ganhos</span>
+            </div>
+          </div>
+          <p className="driver-section__description">
+            Junte-se a uma plataforma que valoriza seu trabalho e oferece condições justas para você prosperar como motorista profissional.
+          </p>
+        </div>
 
         <div className="driver-section__content">
           <div className="driver-section__benefits">
