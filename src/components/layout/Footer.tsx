@@ -31,7 +31,13 @@ export const Footer: React.FC = () => {
               <a href="#" className="footer__social-link" aria-label="Facebook">
                 <FiFacebook />
               </a>
-              <a href="#" className="footer__social-link" aria-label="Instagram">
+              <a 
+                href="https://www.instagram.com/urbancarmobilidade/" 
+                className="footer__social-link" 
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FiInstagram />
               </a>
               <a href="#" className="footer__social-link" aria-label="Twitter">
@@ -118,7 +124,7 @@ export const Footer: React.FC = () => {
               </div>
               <div className="footer__contact-item">
                 <FiPhone />
-                <span>(83) 3000-0000</span>
+                <span>+55 69 9337-1212</span>
               </div>
               <div className="footer__contact-item">
                 <FiMail />

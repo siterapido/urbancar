@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiMessageCircle, FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
+import { FiMessageCircle, FiMail, FiPhone, FiMapPin, FiSend, FiInstagram } from 'react-icons/fi';
 import { SectionTitle } from '../shared/SectionTitle';
 import { Button } from '../shared/Button';
 import './Contact.css';
@@ -28,7 +28,11 @@ export const Contact: React.FC = () => {
 
   const openWhatsApp = () => {
     const message = encodeURIComponent('Olá! Gostaria de saber mais sobre o UrbanCar.');
-    window.open(`https://wa.me/5583999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5569993371212?text=${message}`, '_blank');
+  };
+
+  const openInstagram = () => {
+    window.open('https://www.instagram.com/urbancarmobilidade/', '_blank');
   };
 
   return (
@@ -50,7 +54,7 @@ export const Contact: React.FC = () => {
                 <div className="contact__method-content">
                   <h3>WhatsApp</h3>
                   <p>Suporte direto e rápido</p>
-                  <span>(83) 9 9999-9999</span>
+                  <span>+55 69 9337-1212</span>
                 </div>
               </div>
 
@@ -65,6 +69,17 @@ export const Contact: React.FC = () => {
                 </div>
               </div>
 
+              <div className="contact__method" onClick={openInstagram}>
+                <div className="contact__method-icon">
+                  <FiInstagram />
+                </div>
+                <div className="contact__method-content">
+                  <h3>Instagram</h3>
+                  <p>Siga para novidades</p>
+                  <span>@urbancarmobilidade</span>
+                </div>
+              </div>
+
               <div className="contact__method">
                 <div className="contact__method-icon">
                   <FiPhone />
@@ -72,7 +87,7 @@ export const Contact: React.FC = () => {
                 <div className="contact__method-content">
                   <h3>Telefone</h3>
                   <p>Seg-Sex, 8h às 18h</p>
-                  <span>(83) 3000-0000</span>
+                  <span>+55 69 9337-1212</span>
                 </div>
               </div>
 
