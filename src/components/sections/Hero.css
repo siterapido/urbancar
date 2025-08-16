@@ -85,6 +85,12 @@
   margin-bottom: var(--spacing-10);
 }
 
+.hero__cta .button {
+  flex: 1;
+  min-width: 0;
+  max-width: 200px;
+}
+
 .hero__features {
   display: flex;
   gap: var(--spacing-8);
@@ -253,6 +259,13 @@
     flex-direction: column;
     gap: var(--spacing-3);
     margin-bottom: var(--spacing-8);
+    width: 100%;
+  }
+
+  .hero__cta .button {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
   }
 
   .hero__features {

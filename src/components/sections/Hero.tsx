@@ -32,16 +32,16 @@ export const Hero: React.FC = () => {
             <div className="hero__cta">
               <Button 
                 variant="primary" 
-                size="xl"
+                size="lg"
                 onClick={() => window.open('https://play.google.com/store/apps/details?id=ikKpss.urbancar&pli=1', '_blank')}
               >
                 <FiSmartphone />
-                Baixar o App
+                Baixar App
               </Button>
               
               <Button 
                 variant="secondary" 
-                size="xl"
+                size="lg"
                 onClick={() => scrollToSection('motoristas')}
               >
                 🚗 Sou Motorista

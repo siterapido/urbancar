@@ -138,13 +138,13 @@ export const DriverSection: React.FC = () => {
             <div className="driver-section__buttons">
               <Button 
                 variant="secondary" 
-                size="lg"
+                size="md"
                 onClick={() => window.open('https://play.google.com/store/apps/details?id=ikKpss.urbancar&pli=1', '_blank')}
               >
-                Quero Ser Motorista UrbanCar
+                Quero Ser Motorista
               </Button>
-              <Button variant="ghost" size="lg">
-                Saiba Mais Sobre os Benefícios
+              <Button variant="ghost" size="md">
+                Saiba Mais
               </Button>
             </div>
           </div>

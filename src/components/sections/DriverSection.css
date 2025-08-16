@@ -214,6 +214,12 @@
   flex-wrap: wrap;
 }
 
+.driver-section__buttons .button {
+  flex: 1;
+  min-width: 0;
+  max-width: 250px;
+}
+
 /* Light theme adjustments for cards in this section */
 .driver-section .card {
   background-color: rgba(255, 255, 255, 0.95);
@@ -327,6 +333,12 @@
   .driver-section__buttons {
     flex-direction: column;
     gap: var(--spacing-3);
+  }
+
+  .driver-section__buttons .button {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
   }
 }
 

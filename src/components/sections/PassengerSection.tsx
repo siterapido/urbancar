@@ -90,10 +90,10 @@ export const PassengerSection: React.FC = () => {
                 onClick={() => window.open('https://play.google.com/store/apps/details?id=ikKpss.urbancar&pli=1', '_blank')}
               >
                 <FiSmartphone />
-                Baixar o App e Começar Agora
+                Baixar App
               </Button>
               <Button variant="white" size="md">
-                Ver Como Funciona
+                Como Funciona
               </Button>
             </div>
           </div>

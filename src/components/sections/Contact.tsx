@@ -174,9 +174,9 @@ export const Contact: React.FC = () => {
                 ></textarea>
               </div>
 
-              <Button type="submit" variant="primary" size="lg" fullWidth>
+              <Button type="submit" variant="primary" size="md" fullWidth>
                 <FiSend />
-                Enviar mensagem
+                Enviar Mensagem
               </Button>
             </form>
           </div>
