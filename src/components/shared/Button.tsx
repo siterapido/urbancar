@@ -3,7 +3,7 @@ import './Button.css';
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'white';
   size?: 'sm' | 'md' | 'lg' | 'xl';
   fullWidth?: boolean;
   disabled?: boolean;

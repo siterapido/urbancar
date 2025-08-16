@@ -72,6 +72,20 @@
   transform: translateY(-1px);
 }
 
+.button--white {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border-color: var(--white);
+}
+
+.button--white:hover:not(.button--disabled) {
+  background-color: var(--gray-100);
+  color: var(--primary-dark);
+  border-color: var(--gray-100);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
 /* Button Sizes */
 .button--sm {
   padding: var(--spacing-2) var(--spacing-4);
