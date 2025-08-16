@@ -1,0 +1,240 @@
+.features {
+  padding: var(--spacing-24) 0;
+  background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 50%, var(--gray-50) 100%);
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-8);
+  margin-bottom: var(--spacing-16);
+}
+
+.features__item {
+  position: relative;
+}
+
+.features__card {
+  height: 100%;
+  transition: var(--transition);
+  border: 2px solid var(--gray-200);
+  background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+}
+
+.features__card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--white);
+}
+
+.features__card:hover .card__icon {
+  background-color: var(--white);
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.features__card:hover .card__title,
+.features__card:hover .card__description {
+  color: var(--white);
+}
+
+.features__highlight {
+  position: absolute;
+  top: -8px;
+  right: var(--spacing-4);
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 2;
+  box-shadow: var(--shadow);
+}
+
+.features__highlight--passageiros {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--white);
+}
+
+.features__highlight--motoristas {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+  color: var(--gray-900);
+}
+
+.features__highlight--todos {
+  background: linear-gradient(135deg, var(--gray-800) 0%, var(--gray-600) 100%);
+  color: var(--white);
+}
+
+/* Comparison Section */
+.features__comparison {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  border-radius: var(--border-radius-2xl);
+  padding: var(--spacing-12);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.features__comparison::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 165, 0, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.features__comparison-content {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--spacing-8);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.features__comparison-section h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-4);
+  color: var(--white);
+  text-align: center;
+}
+
+.features__comparison-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features__comparison-section li {
+  font-size: var(--font-size-lg);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--spacing-3);
+  color: var(--gray-100);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-2);
+}
+
+.features__comparison-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.features__comparison-divider::before,
+.features__comparison-divider::after {
+  content: '';
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(180deg, transparent 0%, var(--secondary-color) 50%, transparent 100%);
+}
+
+.features__comparison-logo {
+  background-color: var(--white);
+  padding: var(--spacing-3);
+  border-radius: 50%;
+  box-shadow: var(--shadow-xl);
+}
+
+.features__logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 1023px) {
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-6);
+  }
+
+  .features__comparison-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+    text-align: center;
+  }
+
+  .features__comparison-divider::before,
+  .features__comparison-divider::after {
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--secondary-color) 50%, transparent 100%);
+  }
+}
+
+@media (max-width: 767px) {
+  .features {
+    padding: var(--spacing-16) 0;
+  }
+
+  .features__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-12);
+  }
+
+  .features__comparison {
+    padding: var(--spacing-8);
+  }
+
+  .features__comparison-section h3 {
+    font-size: var(--font-size-xl);
+  }
+
+  .features__comparison-section li {
+    font-size: var(--font-size-base);
+  }
+
+  .features__logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .features__comparison-divider::before,
+  .features__comparison-divider::after {
+    width: 60px;
+  }
+}
+
+/* Animation Effects */
+@keyframes featureFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.features__item:nth-child(even) .features__card {
+  animation: featureFloat 4s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.features__item:nth-child(odd) .features__card {
+  animation: featureFloat 4s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Hover effects for comparison section */
+.features__comparison-section:hover {
+  transform: scale(1.02);
+  transition: var(--transition);
+}
+
+.features__comparison-logo:hover {
+  transform: rotate(360deg);
+  transition: transform 0.8s ease;
+}

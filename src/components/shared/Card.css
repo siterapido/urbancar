@@ -1,0 +1,177 @@
+.card {
+  background-color: var(--white);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card--hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-color);
+}
+
+/* Card Variants */
+.card--default {
+  /* Default styling already applied */
+}
+
+.card--feature {
+  text-align: center;
+  padding: var(--spacing-8);
+}
+
+.card--benefit {
+  background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+  border: 2px solid var(--gray-100);
+}
+
+.card--benefit:hover {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--white);
+  border-color: var(--primary-color);
+}
+
+.card--benefit:hover .card__icon {
+  color: var(--white);
+}
+
+.card--benefit:hover .card__title {
+  color: var(--white);
+}
+
+.card--benefit:hover .card__description {
+  color: var(--white);
+  opacity: 0.9;
+}
+
+.card--testimonial {
+  background-color: var(--gray-50);
+  border: none;
+  position: relative;
+}
+
+.card--testimonial::before {
+  content: '"';
+  position: absolute;
+  top: var(--spacing-4);
+  left: var(--spacing-6);
+  font-size: var(--font-size-6xl);
+  color: var(--primary-color);
+  font-family: serif;
+  line-height: 1;
+  opacity: 0.3;
+}
+
+/* Card Elements */
+.card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: var(--border-radius-xl);
+  margin-bottom: var(--spacing-4);
+  font-size: var(--font-size-2xl);
+  transition: var(--transition);
+}
+
+.card--feature .card__icon {
+  margin: 0 auto var(--spacing-4);
+}
+
+.card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-3);
+  line-height: var(--leading-tight);
+  transition: var(--transition);
+}
+
+.card__description {
+  color: var(--gray-600);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--spacing-4);
+  flex-grow: 1;
+  transition: var(--transition);
+}
+
+.card__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Special card styles for specific sections */
+.card--step {
+  position: relative;
+  background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+  border: 2px solid var(--gray-200);
+  overflow: hidden;
+}
+
+.card--step::before {
+  content: attr(data-step);
+  position: absolute;
+  top: var(--spacing-4);
+  right: var(--spacing-4);
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+}
+
+.card--step:hover {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--white);
+  border-color: var(--primary-dark);
+}
+
+.card--step:hover::before {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+
+.card--step:hover .card__title {
+  color: var(--white);
+}
+
+.card--step:hover .card__description {
+  color: var(--white);
+  opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .card {
+    padding: var(--spacing-4);
+  }
+  
+  .card--feature {
+    padding: var(--spacing-6);
+  }
+  
+  .card__icon {
+    width: 56px;
+    height: 56px;
+    font-size: var(--font-size-xl);
+  }
+  
+  .card__title {
+    font-size: var(--font-size-lg);
+  }
+}
