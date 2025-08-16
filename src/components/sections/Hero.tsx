@@ -33,10 +33,10 @@ export const Hero: React.FC = () => {
               <Button 
                 variant="primary" 
                 size="xl"
-                onClick={() => scrollToSection('passageiros')}
+                onClick={() => window.open('https://play.google.com/store/apps/details?id=ikKpss.urbancar&pli=1', '_blank')}
               >
                 <FiSmartphone />
-                Sou Passageiro
+                Baixar o App
               </Button>
               
               <Button 

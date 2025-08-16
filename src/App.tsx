@@ -9,6 +9,7 @@ import { SpecialOffer } from './components/sections/SpecialOffer';
 import { Blog } from './components/sections/Blog';
 import { Contact } from './components/sections/Contact';
 import { Footer } from './components/layout/Footer';
+import { FloatingDownloadButton } from './components/shared/FloatingDownloadButton';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <FloatingDownloadButton />
     </div>
   );
 }

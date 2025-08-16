@@ -136,7 +136,11 @@ export const DriverSection: React.FC = () => {
             <h3>Pronto para aumentar sua renda?</h3>
             <p>Cadastre-se agora e receba bônus especial nas primeiras 10 corridas</p>
             <div className="driver-section__buttons">
-              <Button variant="secondary" size="lg">
+              <Button 
+                variant="secondary" 
+                size="lg"
+                onClick={() => window.open('https://play.google.com/store/apps/details?id=ikKpss.urbancar&pli=1', '_blank')}
+              >
                 Quero Ser Motorista UrbanCar
               </Button>
               <Button variant="ghost" size="lg">

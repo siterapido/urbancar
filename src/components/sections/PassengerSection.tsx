@@ -84,7 +84,11 @@ export const PassengerSection: React.FC = () => {
             <h3>Pronto para começar?</h3>
             <p>Baixe o app e ganhe desconto na primeira corrida</p>
             <div className="passenger-section__buttons">
-              <Button variant="primary" size="lg">
+              <Button 
+                variant="primary" 
+                size="lg"
+                onClick={() => window.open('https://play.google.com/store/apps/details?id=ikKpss.urbancar&pli=1', '_blank')}
+              >
                 <FiSmartphone />
                 Baixar o App e Começar Agora
               </Button>
