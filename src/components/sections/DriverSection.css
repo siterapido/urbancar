@@ -1,6 +1,11 @@
 .driver-section {
   padding: var(--spacing-24) 0;
-  background: linear-gradient(135deg, var(--gray-900) 0%, var(--black) 50%, var(--primary-dark) 100%);
+  background: 
+    linear-gradient(135deg, rgba(0, 166, 81, 0.85) 0%, rgba(0, 133, 66, 0.9) 50%, rgba(26, 26, 26, 0.95) 100%),
+    url('/Imagens/o-homem-arabe-usa-o-telefone-inteligente-enquanto-espera-o-carregamento-da-bateria-no-carro-eco-awarness.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--white);
   position: relative;
   overflow: hidden;
@@ -14,8 +19,8 @@
   right: 0;
   bottom: 0;
   background-image: 
-    radial-gradient(circle at 20% 20%, rgba(0, 166, 81, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 165, 0, 0.1) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -209,31 +214,33 @@
   flex-wrap: wrap;
 }
 
-/* Dark theme adjustments for cards in this section */
+/* Light theme adjustments for cards in this section */
 .driver-section .card {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
-  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.95);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--gray-900);
   backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-xl);
 }
 
 .driver-section .card:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-color: var(--secondary-color);
+  background-color: var(--white);
+  border-color: var(--primary-color);
   transform: translateY(-4px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
 }
 
 .driver-section .card__icon {
-  background-color: var(--secondary-color);
-  color: var(--gray-900);
-}
-
-.driver-section .card__title {
+  background-color: var(--primary-color);
   color: var(--white);
 }
 
+.driver-section .card__title {
+  color: var(--gray-900);
+}
+
 .driver-section .card__description {
-  color: var(--gray-300);
+  color: var(--gray-700);
 }
 
 /* Responsive Design */
